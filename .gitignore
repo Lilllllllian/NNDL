@@ -1,0 +1,65 @@
+# --- training artefacts (large, regenerable) ---
+codes/best_models/
+codes/saved_models/
+codes/results/
+codes/results_*/
+codes/figs/
+codes/idx.pickle
+
+# --- generated report (build_report.py creates the .tex from JSON summaries) ---
+MNIST_From_Scratch_Report_Leyan_Huang.tex
+MNIST_From_Scratch_Report_Leyan_Huang.pdf
+
+# --- LaTeX build artefacts ---
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+
+# --- runtime / OS junk ---
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+*.log
+.ipynb_checkpoints/
+.vscode/
+
+# --- reference materials (PDFs / extracts of nnpj2, official project, template) ---
+*.pdf
+*_extracted.txt
+
+# --- legacy report duplicates / planning notes (not needed for reproduction) ---
+REPORT.md
+REPORT_CCF_A.md
+REPORT_FORMAL.md
+REPORT_PERFECT.md
+PROJECT_AUDIT.md
+SUBMISSION_CHECKLIST.md
+
+# --- legacy / exploratory scripts that the new pipeline doesn't use ---
+codes/advanced_analysis.py
+codes/hyperparameter_search.py
+codes/optional_directions.py
+codes/run_experiments.py
+codes/test_train.py
+codes/test_model.py
+codes/weight_visualization.py
+codes/dataset_explore.ipynb
+codes/draw_tools/
+codes/mlp_sgd_multistep_curves.png
+codes/README.md
+
+# --- legacy run logs ---
+results_full_*.log
+
+# --- BUT we DO want MNIST in the repo so Colab can train without network ---
+!codes/dataset/
+!codes/dataset/MNIST/
+!codes/dataset/MNIST/*.gz
+!codes/dataset/MNIST/README.md
