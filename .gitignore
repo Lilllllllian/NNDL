@@ -34,10 +34,14 @@ texput.log
 *.bak
 
 # ------------------------------------------------------------------
-# Generated report source (build_report.py regenerates it from JSON)
-# Keep the compiled PDF; drop the intermediate .tex
+# Report-related files: the Python renderer, the generated .tex
+# source, and the compiled PDF are all excluded from the public repo.
+# Readers who want the report can download it from the release page
+# or rebuild it locally with build_report.py.
 # ------------------------------------------------------------------
+codes/build_report.py
 MNIST_From_Scratch_Report_Leyan_Huang.tex
+*.pdf
 
 # ------------------------------------------------------------------
 # Training artefacts
