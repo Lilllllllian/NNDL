@@ -1,4 +1,4 @@
-# MNIST From Scratch (NumPy Only)
+# MNIST From Scratch 
 
 A from-scratch MNIST classifier built purely with NumPy — no PyTorch,
 no TensorFlow, no JAX. Every layer, every optimiser, every
@@ -40,7 +40,7 @@ The CNN wins on every axis except wall-clock — the expected price of
 the richer spatial inductive bias — and its ECE is about 4× smaller
 than the MLP's despite having 9× fewer parameters.
 
-## The finding I actually care about
+## Findings
 
 A folk intuition says "data augmentation improves generalisation,
 period". In our robustness study that is only half right.
@@ -80,20 +80,12 @@ python gradient_check.py
 # 2. Part A + Part B (MLP 30 epochs, CNN 20 epochs on full 50k)
 python -u run_full_study.py --pack main
 
-# 3. the five ablations (~80 min on CPU)
+# 3. the five ablations
 python -u run_full_study.py --pack optim
 python -u run_full_study.py --pack reg
 python -u run_full_study.py --pack aug
 python -u run_full_study.py --pack robust
 python -u run_full_study.py --pack error
-
-# 4. render the LaTeX report from the JSON summaries
-python build_report.py
-
-# 5. compile PDF (needs TeX Live / MiKTeX)
-cd ..
-pdflatex -interaction=nonstopmode MNIST_From_Scratch_Report_Leyan_Huang.tex
-pdflatex -interaction=nonstopmode MNIST_From_Scratch_Report_Leyan_Huang.tex
 ```
 
 Every pack supports resume — a sub-run is skipped if both its
@@ -123,7 +115,3 @@ and restart without losing progress.
   study — so train- and test-time geometric distributions are
   guaranteed to be produced by the same code path.
 
-## Contact
-
-Leyan Huang, School of Data Science, Fudan University
-(`23307130460@m.fudan.edu.cn`).
