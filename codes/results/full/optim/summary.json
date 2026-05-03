@@ -1,0 +1,56 @@
+{
+  "rows": [
+    {
+      "name": "opt_sgd_005",
+      "optimizer": "sgd",
+      "lr": 0.05,
+      "scheduler": null,
+      "best_valid_acc": 0.9821,
+      "test_acc": 0.984,
+      "history": "opt_sgd_005"
+    },
+    {
+      "name": "opt_sgd_001",
+      "optimizer": "sgd",
+      "lr": 0.01,
+      "scheduler": null,
+      "best_valid_acc": 0.9613,
+      "test_acc": 0.9661,
+      "history": "opt_sgd_001"
+    },
+    {
+      "name": "opt_sgd_010",
+      "optimizer": "sgd",
+      "lr": 0.1,
+      "scheduler": null,
+      "best_valid_acc": 0.9837,
+      "test_acc": 0.986,
+      "history": "opt_sgd_010"
+    },
+    {
+      "name": "opt_momentum",
+      "optimizer": "momentum",
+      "lr": 0.05,
+      "scheduler": null,
+      "best_valid_acc": 0.987,
+      "test_acc": 0.989,
+      "history": "opt_momentum"
+    },
+    {
+      "name": "opt_multistep",
+      "optimizer": "sgd",
+      "lr": 0.05,
+      "scheduler": "multistep",
+      "best_valid_acc": 0.9788,
+      "test_acc": 0.9804,
+      "history": "opt_multistep"
+    }
+  ],
+  "labels": [
+    "SGD-0.05",
+    "SGD-0.01",
+    "SGD-0.10",
+    "Momentum",
+    "MultiStep"
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "rows": [
+    {
+      "name": "aug_clean",
+      "use_rotation": false,
+      "use_translation": false,
+      "use_scaling": false,
+      "best_valid_acc": 0.9821,
+      "test_acc": 0.9837
+    },
+    {
+      "name": "aug_R",
+      "use_rotation": true,
+      "use_translation": false,
+      "use_scaling": false,
+      "best_valid_acc": 0.9831,
+      "test_acc": 0.9845
+    },
+    {
+      "name": "aug_T",
+      "use_rotation": false,
+      "use_translation": true,
+      "use_scaling": false,
+      "best_valid_acc": 0.9801,
+      "test_acc": 0.9831
+    },
+    {
+      "name": "aug_S",
+      "use_rotation": false,
+      "use_translation": false,
+      "use_scaling": true,
+      "best_valid_acc": 0.982,
+      "test_acc": 0.9855
+    },
+    {
+      "name": "aug_RT",
+      "use_rotation": true,
+      "use_translation": true,
+      "use_scaling": false,
+      "best_valid_acc": 0.9812,
+      "test_acc": 0.9854
+    },
+    {
+      "name": "aug_RS",
+      "use_rotation": true,
+      "use_translation": false,
+      "use_scaling": true,
+      "best_valid_acc": 0.9809,
+      "test_acc": 0.9839
+    },
+    {
+      "name": "aug_TS",
+      "use_rotation": false,
+      "use_translation": true,
+      "use_scaling": true,
+      "best_valid_acc": 0.9808,
+      "test_acc": 0.9836
+    },
+    {
+      "name": "aug_RTS",
+      "use_rotation": true,
+      "use_translation": true,
+      "use_scaling": true,
+      "best_valid_acc": 0.9827,
+      "test_acc": 0.9853
+    }
+  ],
+  "labels": [
+    "Clean",
+    "R",
+    "T",
+    "S",
+    "RT",
+    "RS",
+    "TS",
+    "RTS"
+  ]
+}

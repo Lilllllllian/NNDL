@@ -1,0 +1,66 @@
+{
+  "rows": [
+    {
+      "name": "reg_no",
+      "weight_decay": 0.0,
+      "dropout_rate": 0.0,
+      "early_stop": null,
+      "best_valid_acc": 0.9808,
+      "test_acc": 0.9847,
+      "stop_epoch": 0
+    },
+    {
+      "name": "reg_l2_1e4",
+      "weight_decay": 0.0001,
+      "dropout_rate": 0.0,
+      "early_stop": null,
+      "best_valid_acc": 0.9803,
+      "test_acc": 0.9821,
+      "stop_epoch": 0
+    },
+    {
+      "name": "reg_l2_5e4",
+      "weight_decay": 0.0005,
+      "dropout_rate": 0.0,
+      "early_stop": null,
+      "best_valid_acc": 0.9796,
+      "test_acc": 0.9823,
+      "stop_epoch": 0
+    },
+    {
+      "name": "reg_dropout_02",
+      "weight_decay": 0.0001,
+      "dropout_rate": 0.2,
+      "early_stop": null,
+      "best_valid_acc": 0.9827,
+      "test_acc": 0.9827,
+      "stop_epoch": 0
+    },
+    {
+      "name": "reg_dropout_03",
+      "weight_decay": 0.0001,
+      "dropout_rate": 0.3,
+      "early_stop": null,
+      "best_valid_acc": 0.9825,
+      "test_acc": 0.9837,
+      "stop_epoch": 0
+    },
+    {
+      "name": "reg_earlystop",
+      "weight_decay": 0.0001,
+      "dropout_rate": 0.0,
+      "early_stop": 4,
+      "best_valid_acc": 0.9818,
+      "test_acc": 0.9821,
+      "stop_epoch": 0
+    }
+  ],
+  "labels": [
+    "No-Reg",
+    "L2-1e-4",
+    "L2-5e-4",
+    "Dropout-0.2",
+    "Dropout-0.3",
+    "EarlyStop"
+  ]
+}
