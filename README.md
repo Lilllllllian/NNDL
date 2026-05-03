@@ -1,14 +1,7 @@
-# MNIST From Scratch (NumPy Only)
+# MNIST From Scratch 
 
-A from-scratch MNIST classifier built purely with NumPy — no PyTorch,
-no TensorFlow, no JAX. Every layer, every optimiser, every
-learning-rate scheduler, and every data-augmentation transform is
-implemented by hand, and every chain-rule path is checked against a
-finite-difference gradient estimator before we trust it.
+A from-scratch MNIST classifier built purely with NumPy.
 
-On top of that stack we run five controlled ablations and write the
-whole thing up as a standalone research-style report
-(`MNIST_From_Scratch_Report_Leyan_Huang.pdf`).
 
 ## What's in this repo
 
@@ -22,12 +15,8 @@ whole thing up as a standalone research-style report
 | `codes/study_utils.py` | MNIST loader, bilinear affine sampler, plotting helpers |
 | `codes/run_full_study.py` | Experiment driver — `--pack {main,optim,reg,aug,robust,error,all}` |
 | `codes/gradient_check.py` | Analytical vs.\ central-difference gradient verification |
-| `codes/build_report.py` | Reads the JSON summaries and renders the LaTeX report |
-| `Colab_Run.ipynb` | One-click Colab reproduction notebook |
-| `MNIST_From_Scratch_Report_Leyan_Huang.pdf` | The final report |
 
-MNIST itself sits at `codes/dataset/MNIST/*.gz` so Colab can train
-offline.
+MNIST itself sits at `codes/dataset/MNIST/*.gz` .
 
 ## Headline results (full 50 k training set)
 
@@ -40,7 +29,7 @@ The CNN wins on every axis except wall-clock — the expected price of
 the richer spatial inductive bias — and its ECE is about 4× smaller
 than the MLP's despite having 9× fewer parameters.
 
-## The finding I actually care about
+## Findings
 
 A folk intuition says "data augmentation improves generalisation,
 period". In our robustness study that is only half right.
@@ -86,14 +75,6 @@ python -u run_full_study.py --pack reg
 python -u run_full_study.py --pack aug
 python -u run_full_study.py --pack robust
 python -u run_full_study.py --pack error
-
-# 4. render the LaTeX report from the JSON summaries
-python build_report.py
-
-# 5. compile PDF (needs TeX Live / MiKTeX)
-cd ..
-pdflatex -interaction=nonstopmode MNIST_From_Scratch_Report_Leyan_Huang.tex
-pdflatex -interaction=nonstopmode MNIST_From_Scratch_Report_Leyan_Huang.tex
 ```
 
 Every pack supports resume — a sub-run is skipped if both its
@@ -123,7 +104,3 @@ and restart without losing progress.
   study — so train- and test-time geometric distributions are
   guaranteed to be produced by the same code path.
 
-## Contact
-
-Leyan Huang, School of Data Science, Fudan University
-(`23307130460@m.fudan.edu.cn`).
