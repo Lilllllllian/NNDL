@@ -69,7 +69,7 @@ python gradient_check.py
 # 2. Part A + Part B (MLP 30 epochs, CNN 20 epochs on full 50k)
 python -u run_full_study.py --pack main
 
-# 3. the five ablations (~80 min on CPU)
+# 3. the five ablations
 python -u run_full_study.py --pack optim
 python -u run_full_study.py --pack reg
 python -u run_full_study.py --pack aug
